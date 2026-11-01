@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RED CAR | Samarqand</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tashqi CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ichki CSS -->
+    <style>
+        .red-text { color: #ff285d; }
+        #booking { scroll-margin-top: 90px; }
+    </style>
+    <style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    ::selection {
+        background: #e50914;
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<header class="header">
+    <a href="#home" class="logo">⌁ RED<span>CAR</span></a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="nav">
+        <a href="#home">Bosh sahifa</a>
+        <a href="#cars">Avtomobillar</a>
+        <a href="#services">Xizmatlar</a>
+        <a href="#about">Biz haqimizda</a>
+        <a href="#media">Media</a>
+        <a href="#faq">Savol-javob</a>
+    </nav>
+
+    <div class="header-right">
+        <a href="tel:+998956992040" class="phone">☎ +998 956992040
+        <a href="#booking" class="btn">Bron qilish</a>
+    </div>
+</header>
+
+<main>
+
+<!-- BOSH SAHIFA -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <small class="kicker">● SAMARQANDDA AVTOMOBIL IJARASI</small>
+
+        <h1>
+            Safaringizni<br>
+            biz bilan <span>boshlang!</span>
+        </h1>
+
+        <p>
+            Zamonaviy avtomobillar, qulay xizmat
+            va ishonchli ijara — barchasi bir joyda.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#cars" class="btn">Avtomobillarni ko‘rish →</a>
+            <a href="#media" class="btn outline">▶ Video ko‘rish</a>
+        </div>
+
+        <div class="stats">
+            <div><b>6+</b><small>Avtomobil turi</small></div>
+            <div><b>24/7</b><small>Murojaat uchun</small></div>
+            <div><b>100%</b><small>Qulay xizmat</small></div>
+        </div>
+    </div>
+
+    <div class="hero-car">
+        <div class="orbit"></div>
+        <img src="images/kia-k5.png.png" alt="Kia K5 avtomobili">
+        <b>KIA K5 <small>PREMIUM CLASS</small></b>
+    </div>
+</section>
+
+<!-- QIDIRUV -->
+<section class="searchbar">
+    <input type="search" id="searchInput"
+           placeholder="Avtomobil nomini qidiring...">
+
+    <select id="typeFilter">
+        <option value="all">Barcha avtomobillar</option>
+        <option value="sedan">Sedan</option>
+        <option value="crossover">Krossover</option>
+        <option value="premium">Premium</option>
+    </select>
+
+    <select id="sortFilter">
+        <option value="default">Narx bo‘yicha</option>
+        <option value="low">Arzondan qimmatga</option>
+        <option value="high">Qimmatdan arzonga</option>
+    </select>
+
+    <button class="btn" id="searchButton">Qidirish</button>
+</section>
+
+<!-- AVTOPARK -->
+<section class="cars wrap" id="cars">
+
+    <div class="intro">
+        <small class="kicker">/// BIZNING AVTOPARK</small>
+        <h2>O‘zingizga mos avtomobilni <span>tanlang</span></h2>
+        <p>Har qanday safar uchun qulay avtomobillar.</p>
+        <a href="#price-table" class="btn outline">Narxlarni ko‘rish →</a>
+    </div>
+
+    <div class="car-grid" id="carGrid">
+
+        <article class="car" data-name="kia k5"
+                 data-type="premium" data-price="650000">
+            <label>Premium</label>
+            <img src="images/kia-k5.png.png" alt="Kia K5">
+            <h3>Kia K5</h3>
+            <small>2025 · 5 o‘rin · Avtomat</small>
+            <b>650 000 <small>so‘m/kun</small></b>
+            <button class="car-book" data-car="Kia K5">Batafsil →</button>
+        </article>
+
+        <article class="car" data-name="chevrolet malibu"
+                 data-type="premium" data-price="750000">
+            <label>Premium</label>
+            <img src="images/malibu.jpg" alt="Chevrolet Malibu">
+            <h3>Chevrolet Malibu</h3>
+            <small>2024 · 5 o‘rin · Avtomat</small>
+            <b>750 000 <small>so‘m/kun</small></b>
+            <button class="car-book" data-car="Chevrolet Malibu">Batafsil →</button>
+        </article>
+
+        <article class="car" data-name="chevrolet cobalt"
+                 data-type="sedan" data-price="350000">
+            <label class="blue">Sedan</label>
+            <img src="images/cobalt.jpg" alt="Chevrolet Cobalt">
+            <h3>Chevrolet Cobalt</h3>
+            <small>2024 · 5 o‘rin · Avtomat</small>
+            <b>350 000 <small>so‘m/kun</small></b>
+            <button class="car-book" data-car="Chevrolet Cobalt">Batafsil →</button>
+        </article>
+
+        <article class="car" data-name="chevrolet tracker"
+                 data-type="crossover" data-price="500000">
+            <label>Krossover</label>
+            <img src="images/tracker.jpg" alt="Chevrolet Tracker">
+            <h3>Chevrolet Tracker</h3>
+            <small>2024 · 5 o‘rin · Avtomat</small>
+            <b>500 000 <small>so‘m/kun</small></b>
+            <button class="car-book" data-car="Chevrolet Tracker">Batafsil →</button>
+        </article>
+
+        <article class="car" data-name="chevrolet onix"
+                 data-type="sedan" data-price="400000">
+            <label class="blue">Sedan</label>
+            <img src="images/onix.jpg" alt="Chevrolet Onix">
+            <h3>Chevrolet Onix</h3>
+            <small>2025 · 5 o‘rin · Avtomat</small>
+            <b>400 000 <small>so‘m/kun</small></b>
+            <button class="car-book" data-car="Chevrolet Onix">Batafsil →</button>
+        </article>
+
+        <article class="car" data-name="chevrolet equinox"
+                 data-type="crossover" data-price="800000">
+            <label>Krossover</label>
+            <img src="images/equinox.jpg" alt="Chevrolet Equinox">
+            <h3>Chevrolet Equinox</h3>
+            <small>2024 · 5 o‘rin · Avtomat</small>
+            <b>800 000 <small>so‘m/kun</small></b>
+            <button class="car-book" data-car="Chevrolet Equinox">Batafsil →</button>
+        </article>
+
+    </div>
+
+    <p id="noResults" hidden>Avtomobil topilmadi.</p>
+</section>
+
+<!-- XIZMATLAR -->
+<section class="triple wrap" id="services">
+
+    <div>
+        <small class="kicker">/// XIZMATLAR</small>
+        <h2>Siz uchun qulay imkoniyatlar</h2>
+
+        <div class="service-grid">
+            <article class="service">
+                <strong>🚘</strong>
+                <h3>O‘zingiz haydang</h3>
+                <p>Mustaqil sayohat uchun.</p>
+            </article>
+
+            <article class="service">
+                <strong>♙</strong>
+                <h3>Haydovchi bilan</h3>
+                <p>Tajribali haydovchi xizmati.</p>
+            </article>
+
+            <article class="service">
+                <strong>▦</strong>
+                <h3>Oldindan bron</h3>
+                <p>Sana bo‘yicha buyurtma.</p>
+            </article>
+        </div>
+    </div>
+
+    <div class="video-box">
+        <video controls poster="images/video-poster.jpg">
+            <source src="media/redcar-video.mp4" type="video/mp4">
+            Brauzeringiz videoni qo‘llamaydi.
+        </video>
+        <b>RED CAR — Samarqand</b>
+    </div>
+
+    <div id="about">
+        <small class="kicker">/// BIZ HAQIMIZDA</small>
+        <h2>Yo‘lda ishonch va <span>qulaylik</span></h2>
+        <p class="muted">
+            RED CAR — Samarqandda avtomobil ijarasi xizmatini
+            qulay tashkil etish loyihasi. Turli toifadagi
+            avtomobillarni tanlang va oldindan band qiling.
+        </p>
+
+        <ul class="checks">
+            <li>Turli toifadagi avtomobillar</li>
+            <li>Qulay bron qilish</li>
+            <li>24/7 murojaat imkoniyati</li>
+            <li>Ishonchli xizmat</li>
+        </ul>
+    </div>
+</section>
+
+<!-- AUDIO, PDF VA MAP -->
+<section class="resources wrap" id="media">
+
+    <div>
+        <small class="kicker">/// AUDIO VA RASM</small>
+        <h2>Biz haqimizda <span>batafsil</span></h2>
+
+        <img class="poster" src="images/samarqand.jpg"
+             alt="Samarqand shahri">
+
+        <audio controls>
+            <source src="media/redcar-audio.mp3" type="audio/mpeg">
+            Audio qo‘llab-quvvatlanmaydi.
+        </audio>
+    </div>
+
+    <div>
+        <small class="kicker">/// HUJJATLAR</small>
+        <h2>Kerakli <span>fayllar</span></h2>
+
+        <a class="file" href="docs/ijara-shartnomasi.pdf" target="_blank">
+            📕 <span><b>Ijara shartnomasi</b><small>PDF hujjat</small></span> ↓
+        </a>
+
+        <a class="file" href="docs/ijara-qoidalari.pdf" target="_blank">
+            📕 <span><b>Ijara qoidalari</b><small>PDF hujjat</small></span> ↗
+        </a>
+    </div>
+
+    <div>
+        <small class="kicker">/// XARITA</small>
+        <h2>Bizning <span>manzil</span></h2>
+
+        <div class="map">
+            <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69c07b?auto=format&fit=crop&w=900&q=80"
+                 alt="Xarita" usemap="#samarqand">
+
+            <map name="samarqand">
+                <area shape="circle" coords="220,130,55"
+                      href="https://www.google.com/maps/search/Registan+Samarkand"
+                      target="_blank" alt="Registon">
+            </map>
+
+            <a href="https://www.google.com/maps/search/Samarkand"
+               target="_blank">📍 Samarqand xaritasini ochish ↗</a>
+        </div>
+    </div>
+</section>
+
+<!-- BRON FORMASI -->
+<section class="booking wrap" id="booking">
+
+    <div>
+        <small class="kicker">/// BRON QILISH</small>
+        <h2>Keyingi manzilingizga biz bilan <span>boring</span></h2>
+        <p class="muted">Formani to‘ldiring, operatorimiz siz bilan bog‘lanadi.</p>
+    </div>
+
+    <form id="bookingForm">
+        <div class="form-grid">
+
+            <label>Ismingiz
+                <input name="name" required minlength="2"
+                       placeholder="Ismingiz">
+            </label>
+
+            <label>Telefon
+                <input name="phone" required type="tel"
+                       pattern="[+0-9\s-]{9,17}"
+                       placeholder="+998 90 123 45 67">
+            </label>
+
+            <label>Avtomobil
+                <select id="bookingCar" name="car" required>
+                    <option value="">Tanlang</option>
+                    <option>Kia K5</option>
+                    <option>Chevrolet Malibu</option>
+                    <option>Chevrolet Cobalt</option>
+                    <option>Chevrolet Tracker</option>
+                    <option>Chevrolet Onix</option>
+                    <option>Chevrolet Equinox</option>
+                </select>
+            </label>
+
+            <label>Sana
+                <input id="bookingDate" name="date" type="date" required>
+            </label>
+
+            <label>Kun soni
+                <input name="days" type="number" min="1" max="60" value="1" required>
+            </label>
+
+            <label>Xizmat turi
+                <select name="service">
+                    <option>O‘zim haydayman</option>
+                    <option>Haydovchi bilan</option>
+                </select>
+            </label>
+
+        </div>
+
+        <label class="wide">Qo‘shimcha izoh
+            <textarea name="message" rows="2"
+                      placeholder="Izohingiz..."></textarea>
+        </label>
+
+        <button class="btn" type="submit">So‘rovni yuborish →</button>
+        <p id="formMessage" class="message"></p>
+    </form>
+</section>
+
+<!-- JADVAL -->
+<section class="prices wrap" id="price-table">
+    <small class="kicker">/// NARXLAR</small>
+    <h2>Avtomobillar <span>narxlari</span></h2>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Avtomobil</th>
+                    <th>Toifa</th>
+                    <th>O‘rin</th>
+                    <th>Kunlik narx</th>
+                    <th>Holat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Kia K5</td><td>Premium</td><td>5</td><td>650 000 so‘m</td><td>Mavjud</td></tr>
+                <tr><td>Chevrolet Malibu</td><td>Premium</td><td>5</td><td>750 000 so‘m</td><td>Mavjud</td></tr>
+                <tr><td>Chevrolet Cobalt</td><td>Sedan</td><td>5</td><td>350 000 so‘m</td><td>Mavjud</td></tr>
+                <tr><td>Chevrolet Tracker</td><td>Krossover</td><td>5</td><td>500 000 so‘m</td><td>Mavjud</td></tr>
+                <tr><td>Chevrolet Onix</td><td>Sedan</td><td>5</td><td>400 000 so‘m</td><td>Mavjud</td></tr>
+                <tr><td>Chevrolet Equinox</td><td>Krossover</td><td>5</td><td>800 000 so‘m</td><td>Mavjud</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="muted">Narxlar namuna sifatida kiritilgan.</p>
+</section>
+
+<!-- SAVOL-JAVOB -->
+<section class="faq wrap" id="faq">
+    <small class="kicker">/// SAVOL-JAVOB</small>
+    <h2>Ko‘p beriladigan <span>savollar</span></h2>
+
+    <details>
+        <summary>Avtomobilni qanday band qilaman?</summary>
+        <p>Bron formasini to‘ldiring yoki telefon orqali bog‘laning.</p>
+    </details>
+
+    <details>
+        <summary>Haydovchi bilan ijaraga olish mumkinmi?</summary>
+        <p>Ha, bron formasida haydovchi bilan xizmatini tanlang.</p>
+    </details>
+
+    <details>
+        <summary>Ijara shartlari qayerda?</summary>
+        <p>Hujjatlar bo‘limidagi PDF fayllarni oching.</p>
+    </details>
+</section>
+
+<section class="price-table section" id="narxlar">
+    <div class="eyebrow"><i></i> AVTOMOBILLAR NARXLARI</div>
+    <h2>Ijara narxlari <em>jadvali</em></h2>
+    <p class="table-description">
+        Avtomobillarimiz va kunlik ijara narxlari bilan tanishing.
+    </p>
+
+    <div class="table-container">
+        <table class="car-table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Avtomobil nomi</th>
+                    <th>Yili</th>
+                    <th>O‘rindiqlar</th>
+                    <th>Kunlik narxi</th>
+                    <th>Holati</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Kia K5</td>
+                    <td>2025</td>
+                    <td>5</td>
+                    <td>650 000 so‘m</td>
+                    <td><span class="available">Mavjud</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Chevrolet Malibu</td>
+                    <td>2024</td>
+                    <td>5</td>
+                    <td>750 000 so‘m</td>
+                    <td><span class="available">Mavjud</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Chevrolet Cobalt</td>
+                    <td>2024</td>
+                    <td>5</td>
+                    <td>350 000 so‘m</td>
+                    <td><span class="available">Mavjud</span></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Chevrolet Tracker</td>
+                    <td>2024</td>
+                    <td>5</td>
+                    <td>500 000 so‘m</td>
+                    <td><span class="available">Mavjud</span></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Chevrolet Onix</td>
+                    <td>2025</td>
+                    <td>5</td>
+                    <td>400 000 so‘m</td>
+                    <td><span class="available">Mavjud</span></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Chevrolet Equinox</td>
+                    <td>2024</td>
+                    <td>5</td>
+                    <td>800 000 so‘m</td>
+                    <td><span class="available">Mavjud</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- AUDIO BO'LIMI -->
+<section class="audio-section section" id="audio">
+
+    <div class="eyebrow">
+        <i></i> RED CAR AUDIO
+    </div>
+
+    <h2>Sayohat uchun <em>musiqa</em></h2>
+
+    <p>Saytimiz orqali musiqani tinglab ko‘ring.</p>
+
+    <audio controls>
+        <source src="audio/music.mp3" type="audio/mpeg">
+        Brauzeringiz audio faylni qo‘llab-quvvatlamaydi.
+    </audio>
+
+</section>
+<!-- VIDEO BO'LIMI -->
+<section class="video-section" id="video">
+
+    <h2>Avtomobillarimiz videosi</h2>
+
+    <p>RED CAR — qulay va ishonchli avtomobil ijarasi.</p>
+
+    <video controls preload="metadata">
+        <source src="./video/car.mp4" type="video/mp4">
+        Brauzeringiz videoni qo‘llab-quvvatlamaydi.
+    </video>
+
+</section>
+<!-- SAMARQAND XARITASI -->
+<section class="map-section section" id="location">
+    <div class="eyebrow"><i></i> BIZNING MANZIL</div>
+    <h2>Bizni <em>Samarqanddan</em> toping</h2>
+
+    <iframe
+        src="https://www.google.com/maps?q=Samarkand,Uzbekistan&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+</section>
+<!-- AFZALLIKLAR RO'YXATI -->
+<section class="section advantages" id="advantages">
+    <div class="eyebrow"><i></i> NIMA UCHUN RED CAR?</div>
+    <h2>Bizning afzalliklarimiz</h2>
+
+    <ul>
+        <li>Yangi va zamonaviy avtomobillar</li>
+        <li>Qulay va hamyonbop ijara narxlari</li>
+        <li>Haydovchili va haydovchisiz ijara</li>
+        <li>24/7 mijozlarni qo‘llab-quvvatlash</li>
+    </ul>
+
+    <h3>Avtomobil ijarasi tartibi</h3>
+    <ol>
+        <li>Kerakli avtomobilni tanlang.</li>
+        <li>Buyurtma formasini to‘ldiring.</li>
+        <li>Ijara shartlarini kelishib oling.</li>
+        <li>Avtomobilni qabul qilib oling.</li>
+    </ol>
+</section>
+
+</main>
+
+<footer>
+    <a class="logo" href="#home">⌁ RED<span>CAR</span></a>
+    <p>Samarqandda avtomobil ijarasi</p>
+    <div>
+        <a href="#cars">Avtomobillar</a>
+        <a href="#services">Xizmatlar</a>
+        <a href="#booking">Bron qilish</a>
+    </div>
+    <a href="tel:+998901234567">+998 90 123 45 67</a>
+    <small>© 2026 RED CAR. Barcha huquqlar himoyalangan.</small>
+</footer>
+
+<a class="to-top" href="#home">↑</a>
+
+<script src="script.js"></script>
+</body>
+</html>
